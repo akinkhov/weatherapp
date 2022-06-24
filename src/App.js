@@ -16,8 +16,7 @@ function App() {
       })
       .catch(function (error) {
         if (error.response) {
-          // Запрос был сделан, и сервер ответил кодом состояния, который
-          // выходит за пределы 2xx
+          
           alert('Нет такого города');
           
         }  
@@ -47,7 +46,9 @@ function App() {
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].description}</p> : null}
+            
           </div>
+         
         </div>
 
         {data.name !== undefined &&
