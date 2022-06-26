@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+
 function App() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
@@ -46,11 +47,10 @@ function App() {
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].description}</p> : null}
+            {data.weather ? <img src='http://openweathermap.org/img/wn/10d@2x.png' alt='logo'/> : null}   
             
           </div>
-         
         </div>
-
         {data.name !== undefined &&
           <div className="bottom">
             <div className="feels">
