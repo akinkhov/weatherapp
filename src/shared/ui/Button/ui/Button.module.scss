@@ -1,0 +1,35 @@
+$primary: #63ABBE;
+$secondary: #C96065;
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  outline: none !important;
+  height: 38px;
+  &:disabled {
+    background: #ddd;
+  }
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.primary {
+  background: $primary;
+  &:hover {
+    background: $primary;
+  }
+}
+
+.Button:disabled:hover {
+  background: #ddd;
+  cursor: auto;
+}

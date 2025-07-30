@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# 🌤 Weather Widget App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение отображает **текущую погоду и прогноз на несколько часов** для выбранного города с красивым **динамическим фоном**.  
+Фон загружается из Unsplash и автоматически обновляется при смене города.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Возможности
 
-### `npm start`
+- 🔹 Поиск погоды по любому городу  
+- 🔹 Отображение **текущей температуры, влажности, ветра и ощущаемой температуры**  
+- 🔹 Прогноз на 8 ближайших временных интервалов  
+- 🔹 **Динамический фон** города с Unsplash  
+- 🔹 **Лоадер** и **плавная смена фона с блюром** при загрузке нового изображения  
+- 🔹 Сохранение последнего выбранного города в `localStorage`  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Используемые технологии
 
-### `npm test`
+- **React + TypeScript** – UI и логика
+- **Vite** – быстрая сборка
+- **SCSS Modules** – стилизация
+- **Axios** – работа с API
+- **Feature-Sliced Design (FSD)** – архитектура проекта
+- **OpenWeatherMap API** – данные о погоде
+- **Unsplash API** – фоновые изображения городов
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Переменные окружения
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Для работы проекта нужны ключи API:  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **OpenWeatherMap**  
+   Получить можно на [https://openweathermap.org/api](https://openweathermap.org/api)  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Unsplash**  
+   Получить на [https://unsplash.com/developers](https://unsplash.com/developers)
 
-### `npm run eject`
+Создайте файл `.env` в корне проекта:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+VITE_OPENWEATHER_KEY=ВАШ_КЛЮЧ
+VITE_UNSPLASH_KEY=ВАШ_КЛЮЧ
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Установка и запуск
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Клонировать проект**
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/akinkhov/weatherapp.git
+cd weatherapp
+npm install
+npm run dev
