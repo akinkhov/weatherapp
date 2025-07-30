@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# 🌤 Weather Widget App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение отображает **текущую погоду и прогноз на несколько часов** для выбранного города с красивым **динамическим фоном**.  
+Фон загружается из Unsplash и автоматически обновляется при смене города.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Возможности
 
-## Expanding the ESLint configuration
+- 🔹 Поиск погоды по любому городу  
+- 🔹 Отображение **текущей температуры, влажности, ветра и ощущаемой температуры**  
+- 🔹 Прогноз на 8 ближайших временных интервалов  
+- 🔹 **Динамический фон** города с Unsplash  
+- 🔹 **Лоадер** и **плавная смена фона с блюром** при загрузке нового изображения  
+- 🔹 Сохранение последнего выбранного города в `localStorage`  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Используемые технологии
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React + TypeScript** – UI и логика
+- **Vite** – быстрая сборка
+- **SCSS Modules** – стилизация
+- **Axios** – работа с API
+- **Feature-Sliced Design (FSD)** – архитектура проекта
+- **OpenWeatherMap API** – данные о погоде
+- **Unsplash API** – фоновые изображения городов
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Переменные окружения
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Для работы проекта нужны ключи API:  
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **OpenWeatherMap**  
+   Получить можно на [https://openweathermap.org/api](https://openweathermap.org/api)  
+
+2. **Unsplash**  
+   Получить на [https://unsplash.com/developers](https://unsplash.com/developers)
+
+Создайте файл `.env` в корне проекта:
+
+VITE_OPENWEATHER_KEY=ВАШ_КЛЮЧ
+VITE_UNSPLASH_KEY=ВАШ_КЛЮЧ
+
+---
+
+## 🚀 Установка и запуск
+
+1. **Клонировать проект**
+
+```bash
+git clone https://github.com/akinkhov/weatherapp.git
+cd weather-widget
+npm install
+npm run dev
