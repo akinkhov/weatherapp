@@ -51,6 +51,6 @@ VITE_UNSPLASH_KEY=ВАШ_КЛЮЧ
 
 ```bash
 git clone https://github.com/akinkhov/weatherapp.git
-cd weather-widget
+cd weatherapp
 npm install
 npm run dev
