@@ -1,0 +1,14 @@
+.forecast {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+
+  .card {
+    min-width: 110px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 5px;
+  }
+}
